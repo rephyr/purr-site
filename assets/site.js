@@ -45,7 +45,7 @@ if (!still) glyphLogo($(".hero"), $(".hero-logo"), $(".install")).catch(() => {}
 
 // once the hero cat is out of sight, Mochi roams the page
 const sections = $$("[data-mood]").filter((s) => s.querySelector("h2"));
-const buddy = roam({ heroCat, sections });
+const mochi = roam({ heroCat, sections });
 
 // ---------- install tabs and copy ----------
 
@@ -81,7 +81,7 @@ async function copy(text, btn) {
     await navigator.clipboard.writeText(text);
     label.textContent = "copied ♥";
     btn.classList.add("done");
-    (btn.closest(".hero") ? hero : buddy).once("proud", 2);
+    (btn.closest(".hero") ? hero : mochi).once("proud", 2);
     const r = btn.getBoundingClientRect();
     hearts(r.left + r.width / 2, r.top, 6);
   } catch {
