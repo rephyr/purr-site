@@ -1,5 +1,5 @@
 _site/
 __pycache__/
-.impeccable/review/
-.impeccable/live/
-.impeccable/questions/
+.impeccable/
+PRODUCT.md
+DESIGN.md
