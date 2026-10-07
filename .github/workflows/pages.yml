@@ -27,11 +27,12 @@ jobs:
         with:
           repository: rephyr/purr
           path: purr
+          fetch-depth: 0  # build.py dates each docs page from its last commit
       - uses: actions/setup-python@v5
         with:
           python-version: "3.12"
       - run: pip install markdown-it-py
-      - run: PURR_DIR=purr python build.py
+      - run: PURR_DIR=purr PURR_REF=HEAD python build.py  # the checkout above is purr's main
       - uses: actions/upload-pages-artifact@v3
         with:
           path: _site
