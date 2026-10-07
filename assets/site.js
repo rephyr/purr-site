@@ -26,6 +26,12 @@ if (sky && isNight) {
   });
 }
 
+// the pinned header casts a little shadow once the page moves under it
+const bar = document.querySelector(".bar");
+const stuck = () => bar.classList.toggle("stuck", scrollY > 4);
+addEventListener("scroll", stuck, { passive: true });
+stuck();
+
 // ---------- the cats ----------
 
 const hero = makeCat($('[data-cat="hero"]'), $('[data-cat-label="hero"]'), "watching");
