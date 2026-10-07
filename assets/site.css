@@ -136,7 +136,7 @@ img, video { display: block; max-width: 100%; }
 .hero-cat .cat { font-size: 1em; min-height: 3.75em; width: 13ch; overflow: visible; }
 .cat-label { font: 500 0.875rem var(--round); color: var(--dim); min-height: 1.4em; }
 .hero-cat .cat-label { font-size: max(0.36em, 13px); white-space: nowrap; }
-.hero-cat, .buddy-cat, .doc-cat { text-align: left; }
+.hero-cat, .doc-cat { text-align: left; }
 
 .hero-words { min-width: 0; }
 .hero h1 { margin: 0; line-height: 0; }
