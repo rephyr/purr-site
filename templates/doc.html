@@ -3,21 +3,35 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>{{title}} · purr ♥</title>
-<meta name="description" content="purr's {{title}}: {{about}}.">
+<title>{{title}} · purr ♥ coding agent for small local models</title>
+<meta name="description" content="{{description}}">
 <meta name="color-scheme" content="dark">
 <meta name="theme-color" content="#120c16">
-<link rel="icon" href="../assets/favicon.svg" type="image/svg+xml">
-<link rel="preload" href="../assets/fonts/maple-mono-regular.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="stylesheet" href="../assets/site.css">
-<script>document.documentElement.classList.add("js")</script>
-<script type="module" src="../assets/doc.js"></script>
+<link rel="canonical" href="{{url}}">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="purr">
+<meta property="og:title" content="{{title}} · purr ♥">
+<meta property="og:description" content="{{description}}">
+<meta property="og:url" content="{{url}}">
+<meta property="og:image" content="{{base}}assets/og.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="purr: a cute coding agent for small local models">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="{{root}}assets/favicon.svg" type="image/svg+xml">
+<link rel="preload" href="{{root}}assets/fonts/maple-mono-regular.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="{{root}}assets/fonts/mplus-rounded-400.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="{{root}}assets/site.css">
+<link rel="modulepreload" href="{{root}}assets/cat.js">
+<link rel="modulepreload" href="{{root}}assets/roam.js">
+<script>{const d=document.documentElement,h=new Date().getHours();d.classList.add("js");if(h>=6&&h<18)d.classList.add("day")}</script>
+<script type="module" src="{{root}}assets/doc.js"></script>
 </head>
 <body class="doc-page">
 <a class="skip" href="#doc">Skip to the text</a>
 
 <header class="bar">
-  <a class="bar-mark" href="../" aria-label="purr home"><img src="../assets/logo.svg" alt="purr" width="87" height="21"></a>
+  <a class="bar-mark" href="{{root}}" aria-label="purr home"><img src="{{root}}assets/logo.svg" alt="purr" width="87" height="21"></a>
   <nav aria-label="Site">
     {{nav}}
     <a href="https://github.com/rephyr/purr">github</a>
@@ -26,9 +40,9 @@
 
 <div class="doc-layout">
   <aside class="doc-side">
-    <button class="doc-cat" type="button" aria-label="Pet the cat"><pre class="cat" data-cat="doc" aria-hidden="true"></pre></button>
+    <button class="doc-cat" type="button" aria-label="Pet Mochi"><pre class="cat" data-cat="doc" data-mood="{{mood}}" aria-hidden="true">{{cat}}</pre></button>
     <details class="toc" open>
-      <summary>on this page</summary>
+      <summary>on this page<span class="toc-now"></span></summary>
       <nav aria-label="On this page">
         <ul>
 {{toc}}
@@ -39,12 +53,11 @@
 
   <main class="doc" id="doc">
     <pre class="yaml doc-front"><span class="dash">---</span>
-<span class="k">page</span>: {{title}}
-<span class="k">about</span>: {{about}}
-<span class="k">source</span>: <a href="{{source_url}}">{{source}}</a>
+{{front}}
 <span class="dash">---</span></pre>
     <h1>{{heading}}</h1>
 {{body}}
+{{pager}}
   </main>
 </div>
 

@@ -1,6 +1,6 @@
 // The cat, ported from purr's tui/cat.py: every mood is a list of frames, a frame is three lines of
 // [cat, extra]. The cat part is pink (her bow hot pink, or a moon at night), the extras lilac.
-// Keep the frames in step with cat.py when she changes there.
+// Keep the frames in step with cat.py when she changes there (its hollow hearts are solid ♥ here).
 
 const EARS = " /\\_/\\♥";
 const SIT = " > ^ < ";
@@ -12,6 +12,33 @@ function sleeping() {
     ["   z", ""], ["", " z"], ["  z", ""]];
   const tails = [' (")(")~', ' (")(")~', ' (")(")~', ' (")(")~', ' (")(")~', ' (")(") ', ' (")(")~', ' (")(")~'];
   return frames(zs.map(([z0, z1], i) => [[EARS, z0], ["( -ω- )", z1], tails[i]]));
+}
+
+// while she sleeps the sky on her bottom row: stars and fireflies at night, the sun by day (cat.py render())
+const STARS = ["  ⋆    ✧", "  ✧    ⋆", "   ⋆     ", "     ✧  ⋆"];
+const FIREFLIES = ["  ·   ✧", " ·   ✧ ", "  ✧  · ", " ✧   · "];
+const SUN = "   ☀";
+
+function sky(isNight, frameNo) {
+  if (!isNight) return SUN;
+  const tick = frameNo * 5; // a sleeping frame is 5 of purr's ticks
+  const list = Math.floor(tick / 24) % 2 ? FIREFLIES : STARS;
+  return list[Math.floor(tick / 6) % list.length];
+}
+
+function waiting() {
+  return frames([
+    [[EARS, "  ?"], "( °ω° )", [SIT, " ~"]],
+    [[EARS, "  ?"], "( °ω° )", [SIT, "~"]],
+    [[EARS, ""], "( °ω° )", [SIT, " ~"]],
+    [[EARS, ""], "( °ω° )", [SIT, "~"]],
+  ]);
+}
+
+// purr's "happy" (done!): hearts drift up
+function copied() {
+  const hs = [["", "  ♥"], ["  ♥", "   ♥"], ["   ♥", "  ♥"], ["    ♥", ""], ["", ""]];
+  return frames(hs.map(([h0, h1]) => [[EARS, h0], ["( ^ω^ )", h1], SIT + "~"]));
 }
 
 function thinking() {
@@ -154,6 +181,8 @@ export const MOODS = {
   building: [360, building(), ["Mochi is kneading code", "Mochi is fixing things with her paws"]],
   running: [360, running(), ["Mochi is chasing a command", "Mochi is pouncing"]],
   proud: [240, proud(), ["tests pass! so proud", "yay, all green!"]],
+  copied: [360, copied(), ["copied ♥", "see you in the terminal"]],
+  waiting: [480, waiting(), ["Mochi is waiting for pets"]],
   petted: [360, petted(), ["prrr~ Mochi loves you", "Mochi is purring"]],
   greeting: [360, greeting(), ["hello! Mochi is here", "Mochi says hi"]],
   watching: [480, watching(), ["Mochi is watching", "Mochi is keeping an eye out"]],
@@ -170,31 +199,47 @@ const night = () => {
   return h < 6 || h >= 18;
 };
 
-function paint(el, frame, mood) {
+const painted = new WeakMap(); // el -> what's on it now
+
+// one row is plain text with only the bow (♥ or ☾) and the extras in spans
+function paint(el, frame, mood, frameNo) {
   const isNight = night();
   const extraColour = mood.startsWith("mode_") ? MODE_COLOUR[mood.slice(5)] : null;
+  const rows = frame.map(([cat, extra], row) =>
+    [isNight && row === 0 ? cat.replace("♥", "☾") : cat, mood === "sleeping" && row === 2 ? sky(isNight, frameNo) : extra]);
+  const key = mood + "|" + rows.join("|");
+  if (painted.get(el) === key) return; // same picture: leave the DOM alone
+  painted.set(el, key);
   el.textContent = "";
-  frame.forEach(([cat, extra], i) => {
-    for (const ch of isNight ? cat.replace("♥", "☾") : cat) {
-      const s = document.createElement("span");
-      s.className = ch === "♥" ? "c-bow" : ch === "☾" ? "c-moon" : "c-cat";
-      s.textContent = ch;
-      el.append(s);
+  rows.forEach(([cat, extra], i) => {
+    for (const part of cat.split(/([♥☾])/)) {
+      if (!part) continue;
+      if (part === "♥" || part === "☾") {
+        const s = document.createElement("span");
+        s.className = part === "♥" ? "c-bow" : "c-moon";
+        s.textContent = part;
+        el.append(s);
+      } else el.append(part);
     }
-    const x = document.createElement("span");
-    x.className = extra.includes("♥") ? "c-heart" : "c-extra";
-    if (extraColour) x.style.color = extraColour;
-    x.textContent = extra;
-    el.append(x);
+    if (extra) {
+      const x = document.createElement("span");
+      x.className = extra.includes("♥") ? "c-heart" : extra.includes("☀") ? "c-sun" : "c-extra";
+      if (extraColour) x.style.color = extraColour;
+      x.textContent = extra;
+      el.append(x);
+    }
     if (i < 2) el.append("\n");
   });
 }
 
 // One cat on the page: cat.set("building") changes her mood, cat.once("petted", 2) plays a mood
-// a couple of times and goes back to the one before.
-export function makeCat(el, labelEl, start = "sleeping", onSay = null) {
+// a couple of times and goes back to the one before. She rests (no timer) while she's off-screen,
+// or while pause() holds her; pass { watch: false } when the caller knows better (Mochi does).
+export function makeCat(el, labelEl, start = "sleeping", onSay = null, { watch = true } = {}) {
   const still = matchMedia("(prefers-reduced-motion: reduce)");
   let mood = start, back = null, i = 0, loops = 0, timer = 0;
+  let held = false, offscreen = false;
+  const resting = () => held || offscreen;
 
   function say() {
     if (!labelEl) return;
@@ -204,8 +249,10 @@ export function makeCat(el, labelEl, start = "sleeping", onSay = null) {
   }
 
   function tick() {
+    clearTimeout(timer);
     const [ms, list] = MOODS[mood];
-    paint(el, list[i % list.length], mood);
+    paint(el, list[i % list.length], mood, i);
+    if (resting()) return; // painted where she is; resume() carries on from here
     i += 1;
     if (i % list.length === 0 && back && ++loops >= back[1]) {
       mood = back[0]; back = null; i = 0;
@@ -217,21 +264,37 @@ export function makeCat(el, labelEl, start = "sleeping", onSay = null) {
 
   function set(next) {
     if (!MOODS[next] || (next === mood && !back)) return;
-    clearTimeout(timer);
     mood = next; i = 0; loops = 0; back = null;
     say();
     tick();
   }
 
   function once(next, times = 1) {
+    if (!MOODS[next]) return;
     const to = back ? back[0] : mood;
-    clearTimeout(timer);
     mood = next; i = 0; loops = 0; back = [to, times];
     say();
     tick();
   }
 
+  function rest(why, on) {
+    const was = resting();
+    if (why === "held") held = on; else offscreen = on;
+    if (was && !resting()) tick();
+    else if (!was && resting()) clearTimeout(timer);
+  }
+
+  if (watch && "IntersectionObserver" in window) {
+    new IntersectionObserver(([e]) => rest("offscreen", !e.isIntersecting)).observe(el);
+  }
+
   say();
   tick();
-  return { set, once, get mood() { return back ? back[0] : mood; }, get busy() { return !!back; } };
+  return {
+    set, once,
+    pause: () => rest("held", true),
+    resume: () => rest("held", false),
+    get mood() { return back ? back[0] : mood; },
+    get busy() { return !!back; },
+  };
 }
