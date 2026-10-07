@@ -1,0 +1,229 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>purr ♥ a cute coding agent for small local models</title>
+<meta name="description" content="A cute coding agent for your terminal, built to get more out of small local models. Works with Ollama, llama.cpp, LM Studio, vLLM and API models.">
+<meta name="color-scheme" content="dark">
+<meta name="theme-color" content="#120c16">
+<meta property="og:title" content="purr ♥">
+<meta property="og:description" content="A cute coding agent for your terminal, built to get more out of small local models.">
+<meta property="og:image" content="assets/demo-poster.jpg">
+<link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+<link rel="preload" href="assets/fonts/maple-mono-regular.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="assets/fonts/coiny.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="assets/site.css">
+<script>document.documentElement.classList.add("js")</script>
+<script type="module" src="assets/site.js"></script>
+</head>
+<body>
+<a class="skip" href="#card">Skip to the card</a>
+
+<header class="bar">
+  <a class="bar-mark" href="./" aria-label="purr home"><img src="assets/logo.svg" alt="purr" width="87" height="21"></a>
+  <nav aria-label="Site">
+    <a href="guide/">guide</a>
+    <a href="benchmarks/">benchmarks</a>
+    <a href="changelog/">changelog</a>
+    <a href="https://github.com/rephyr/purr">github</a>
+  </nav>
+</header>
+
+<main>
+  <section class="hero" aria-labelledby="hero-title">
+    <div class="hero-sky" aria-hidden="true"></div>
+    <div class="hero-top">
+      <button class="hero-cat" type="button" aria-label="Pet the cat">
+        <pre class="cat" data-cat="hero" aria-hidden="true"></pre>
+        <span class="cat-label" data-cat-label="hero" aria-live="polite"></span>
+      </button>
+      <div class="hero-words">
+        <h1 id="hero-title"><img class="hero-logo" src="assets/logo.svg" alt="purr" width="580" height="140"></h1>
+        <p class="tagline">A cute coding agent for your terminal, built to get more out of <em>small local models</em>.</p>
+      </div>
+    </div>
+
+    <div class="install" data-install>
+      <div class="install-tabs" role="tablist" aria-label="How to install">
+        <button role="tab" id="tab-curl" aria-controls="cmd-curl" aria-selected="true">curl</button>
+        <button role="tab" id="tab-uv" aria-controls="cmd-uv" aria-selected="false" tabindex="-1">uv</button>
+        <button role="tab" id="tab-arch" aria-controls="cmd-arch" aria-selected="false" tabindex="-1">arch</button>
+        <button role="tab" id="tab-wsl" aria-controls="cmd-wsl" aria-selected="false" tabindex="-1">windows</button>
+      </div>
+      <div class="install-body">
+        <div role="tabpanel" id="cmd-curl" aria-labelledby="tab-curl" class="cmd">
+          <code><span class="prompt" aria-hidden="true">$ </span>curl -LsSf https://raw.githubusercontent.com/<wbr>rephyr/<wbr>purr/<wbr>main/<wbr>install.sh | sh</code>
+        </div>
+        <div role="tabpanel" id="cmd-uv" aria-labelledby="tab-uv" class="cmd" hidden>
+          <code><span class="prompt" aria-hidden="true">$ </span>uv tool install git+https://github.com/<wbr>rephyr/<wbr>purr</code>
+        </div>
+        <div role="tabpanel" id="cmd-arch" aria-labelledby="tab-arch" class="cmd" hidden>
+          <code><span class="prompt" aria-hidden="true">$ </span>yay -S purr-agent-git</code>
+        </div>
+        <div role="tabpanel" id="cmd-wsl" aria-labelledby="tab-wsl" class="cmd" hidden>
+          <code><span class="prompt" aria-hidden="true">&gt; </span>wsl --install</code>
+          <p class="cmd-note">then the curl line inside WSL. Using Ollama on the Windows side? <a href="https://github.com/rephyr/purr#install">Two settings in the README</a>.</p>
+        </div>
+        <button class="copy" type="button" data-copy><span class="copy-label">copy</span></button>
+      </div>
+    </div>
+
+    <p class="then">then run <code>purr</code> in a project folder. It finds
+      <span class="be">Ollama</span>, <span class="be">llama.cpp</span>, <span class="be">LM Studio</span> and
+      <span class="be">vLLM</span> by itself, or takes an API key.</p>
+
+    <a class="down" href="#card" aria-label="Read on">
+      <span aria-hidden="true">read the card</span>
+      <svg viewBox="0 0 12 16" width="12" height="16" aria-hidden="true"><path d="M6 1v13M1 9l5 5 5-5" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+    </a>
+  </section>
+
+  <article class="card" id="card" aria-label="purr's card">
+    <section class="front" data-mood="watching" aria-label="At a glance">
+      <p class="front-title"><span>rephyr</span> / <strong>purr</strong> <span class="front-tags"><span><i aria-hidden="true">✎</i> coding agent</span><span><i aria-hidden="true">✦</i> small models</span><span><i aria-hidden="true">♥</i> local-first</span></span></p>
+      <pre class="yaml"><span class="dash">---</span>
+<span class="k">license</span>: MIT
+<span class="k">version</span>: 0.5.0
+<span class="k">runs_on</span>: ollama, llama.cpp, lm studio, vllm
+<span class="k">also</span>: any OpenAI-compatible API, free tiers included
+<span class="k">telemetry</span>: none
+<span class="k">account</span>: none
+<span class="dash">---</span></pre>
+    </section>
+
+    <section class="block demo" data-mood="running" aria-labelledby="demo-h">
+      <h2 id="demo-h">Example output</h2>
+      <figure>
+        <div class="screen">
+          <video src="assets/demo.mp4" poster="assets/demo-poster.jpg" width="1000" height="790"
+                 autoplay muted loop playsinline preload="metadata"
+                 aria-label="purr in the terminal fixing a bug with Qwen3.6"></video>
+        </div>
+        <figcaption>purr fixing a bug with Qwen3.6 on a local GPU, at 2× speed. <a href="assets/demo.mp4">Full size</a></figcaption>
+      </figure>
+    </section>
+
+    <section class="block repairs" data-mood="building" aria-labelledby="rep-h">
+      <h2 id="rep-h">Why small models finish here</h2>
+      <p class="lede">Small models slip. purr expects it: a lean prompt, limits that fit the model's context,
+        and a harness that catches the slips instead of failing on them.</p>
+
+      <ol class="log" aria-label="What purr does when a small model slips">
+        <li data-scene="context">
+          <div class="lines">
+            <div class="ln">32k context <span class="t-dim">72% full</span></div>
+            <div class="ln"><span class="t-ok">✓</span> the older chat becomes a short summary</div>
+          </div>
+          <p class="pin">Limits fit the model's context.</p>
+        </li>
+        <li data-scene="fuzzy">
+          <div class="lines">
+            <div class="ln"><span class="t-tool">edit_file</span> src/stats.py <span class="t-dim">indented 6 spaces, the file uses 4</span></div>
+            <div class="ln"><span class="t-ok">✓</span> matched ignoring indent, re-indented</div>
+          </div>
+          <p class="pin">Fuzzy edits still apply.</p>
+        </li>
+        <li data-scene="text">
+          <div class="lines">
+            <div class="ln"><span class="t-dim">writes</span> &lt;tool_call&gt;{"name": "run", …}&lt;/tool_call&gt; <span class="t-dim">as plain text</span></div>
+            <div class="ln"><span class="t-ok">✓</span> ran it as a tool call</div>
+          </div>
+          <p class="pin">Tool calls written as text still run.</p>
+        </li>
+        <li data-scene="checks">
+          <div class="lines">
+            <div class="ln"><span class="t-tool">edit_file</span> src/report.py <span class="t-warn">✗ ruff F821 undefined name</span></div>
+            <div class="ln"><span class="t-ok">✓</span> syntax <span class="t-ok">✓</span> ruff, after the model's fix</div>
+          </div>
+          <p class="pin">Every edit gets checked.</p>
+        </li>
+        <li data-scene="loop">
+          <div class="lines">
+            <div class="ln"><span class="t-tool">edit_file</span> src/stats.py <span class="t-dim">the 8th change, still failing</span></div>
+            <div class="ln"><span class="t-warn">↺</span> a step back: what's known, why it fails, a new approach</div>
+          </div>
+          <p class="pin">Loops get caught.</p>
+        </li>
+        <li data-scene="done">
+          <div class="lines">
+            <div class="ln"><span class="t-dim">wants to say</span> "done"</div>
+            <div class="ln"><span class="t-tool">reads</span> the request again, <span class="t-tool">run</span> tests <span class="t-ok">✓ 14 passed</span></div>
+          </div>
+          <p class="pin">Done means checked: the request again, then the tests.</p>
+        </li>
+        <li data-scene="plan">
+          <div class="lines">
+            <div class="ln"><span class="t-tool">plan mode</span> a big model writes three tickets</div>
+            <div class="ln"><span class="t-ok">✓</span> a small model does them one by one</div>
+          </div>
+          <p class="pin">Big jobs become small tickets.</p>
+        </li>
+      </ol>
+      <p class="aside">Acted out, not a real log. The numbers are purr's own settings: a step back after 8
+        changes to the same file, compacting at 72% on a context of 40k or less (later on bigger ones).</p>
+    </section>
+
+    <section class="block modes" data-mood="mode_code" aria-labelledby="modes-h">
+      <h2 id="modes-h">Modes</h2>
+      <p class="lede">shift+tab switches. Each one changes what purr is allowed to do.</p>
+      <table class="modes-table">
+        <tbody>
+          <tr data-mode="code" tabindex="0"><td class="g">✎</td><th scope="row">code</th><td>does the work (the default)</td></tr>
+          <tr data-mode="ask" tabindex="0"><td class="g">◈</td><th scope="row">ask</th><td>looks around, never changes anything</td></tr>
+          <tr data-mode="learn" tabindex="0"><td class="g">✿</td><th scope="row">learn</th><td>leaves the key lines for you to write</td></tr>
+          <tr data-mode="pair" tabindex="0"><td class="g">⇄</td><th scope="row">pair</th><td>you take turns, one step each</td></tr>
+          <tr data-mode="plan" tabindex="0"><td class="g">✦</td><th scope="row">plan</th><td>a big model writes tickets, a small one does them</td></tr>
+          <tr data-mode="chat" tabindex="0"><td class="g">♥</td><th scope="row">chat</th><td>just talking</td></tr>
+          <tr data-mode="create" tabindex="0"><td class="g">✧</td><th scope="row">create</th><td>ideas, names and stories</td></tr>
+        </tbody>
+      </table>
+      <p class="aside">Your own agent is a Markdown file in <code>~/.config/purr/agents/</code>, or
+        <code>/agent new reviews my code</code> and purr writes it. Agents from Claude Code and OpenCode work too.</p>
+    </section>
+
+    <section class="block evals" data-mood="proud" aria-labelledby="eval-h">
+      <h2 id="eval-h">Evaluation</h2>
+      <table class="eval-table">
+        <thead><tr><th scope="col">benchmark</th><th scope="col">model</th><th scope="col">runs</th><th scope="col" class="num">pass@1</th></tr></thead>
+        <tbody>
+          <tr><td>Terminal-Bench 2.1</td><td>DeepSeek V4.1 Flash</td><td>89 tasks, one try each</td><td class="num"><strong>82.0%</strong> <span class="pm">± 4.1</span></td></tr>
+        </tbody>
+      </table>
+      <p class="aside">Two tasks can't be passed by anyone right now (their graders broke); on the other 87,
+        purr passed 73. The scores other harnesses reported with the same model, and every purr run, are on
+        the <a href="benchmarks/">benchmarks page</a>. Local-model results are coming.</p>
+      <p class="aside">Try it on your own GPU: <code>purr bench</code> puts purr and OpenCode on the same small tasks
+        with the same model and hidden tests decide.</p>
+    </section>
+
+    <section class="block privacy" data-mood="purring" aria-labelledby="priv-h">
+      <h2 id="priv-h">Yours</h2>
+      <p>No telemetry, no account. purr talks only to the model you pick, the pages the model fetches, and
+        GitHub for Godot docs. Chats stay on your machine. <code>/private</code> switches to local models only:
+        no web, and the chat isn't saved.</p>
+    </section>
+  </article>
+
+  <section class="close" data-mood="sleeping" aria-labelledby="close-h">
+    <h2 id="close-h">Give her a folder.</h2>
+    <div class="close-cmd">
+      <code>curl -LsSf https://raw.githubusercontent.com/<wbr>rephyr/<wbr>purr/<wbr>main/<wbr>install.sh | sh</code>
+      <button class="copy" type="button" data-copy-text="curl -LsSf https://raw.githubusercontent.com/rephyr/purr/main/install.sh | sh"><span class="copy-label">copy</span></button>
+    </div>
+    <ul class="close-links">
+      <li><a href="guide/">Read the guide</a></li>
+      <li><a href="benchmarks/">How it's measured</a></li>
+      <li><a href="changelog/">What changed</a></li>
+      <li><a href="https://github.com/rephyr/purr">Source on GitHub</a></li>
+    </ul>
+  </section>
+</main>
+
+
+<footer class="foot">
+  <span>purr ♥ is MIT licensed</span>
+  <a href="https://github.com/rephyr/purr">github.com/rephyr/purr</a>
+</footer>
+</body>
+</html>

@@ -1,0 +1,776 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-10-07T09:04:53+00:00",
+  "title": "Design System: purr",
+  "extensions": {
+    "colorMeta": {
+      "bubblegum-night": {
+        "role": "neutral",
+        "displayName": "Bubblegum Night",
+        "canonical": "#120c16",
+        "tonalRamp": [
+          "#0e0812",
+          "#28212c",
+          "#443d49",
+          "#625a67",
+          "#827a87",
+          "#a39ba9",
+          "#c9c0cf",
+          "#f3ebfa"
+        ]
+      },
+      "plum-panel": {
+        "role": "neutral",
+        "displayName": "Plum Panel",
+        "canonical": "#22152b",
+        "tonalRamp": [
+          "#110519",
+          "#2b1e34",
+          "#473952",
+          "#665771",
+          "#867692",
+          "#a797b4",
+          "#cdbcda",
+          "#f5e9fe"
+        ]
+      },
+      "plum-panel-hi": {
+        "role": "neutral",
+        "displayName": "Plum Panel Hi",
+        "canonical": "#2c1b36",
+        "tonalRamp": [
+          "#13041b",
+          "#2d1c37",
+          "#493754",
+          "#685574",
+          "#887495",
+          "#aa95b7",
+          "#d0bbde",
+          "#f6e9ff"
+        ]
+      },
+      "plum-deep": {
+        "role": "neutral",
+        "displayName": "Plum Deep",
+        "canonical": "#0b070e",
+        "tonalRamp": [
+          "#0d0911",
+          "#27222a",
+          "#433d47",
+          "#615b65",
+          "#807b85",
+          "#a29ca6",
+          "#c8c1cd",
+          "#f2ebf7"
+        ]
+      },
+      "plum-hairline": {
+        "role": "neutral",
+        "displayName": "Plum Hairline",
+        "canonical": "#3c2346",
+        "tonalRamp": [
+          "#16011e",
+          "#30183a",
+          "#4e3458",
+          "#6d5278",
+          "#8d7199",
+          "#af92bc",
+          "#d6b7e3",
+          "#f8e8ff"
+        ]
+      },
+      "plum-hairline-hi": {
+        "role": "neutral",
+        "displayName": "Plum Hairline Hi",
+        "canonical": "#4c2d59",
+        "tonalRamp": [
+          "#16011e",
+          "#33143f",
+          "#50315d",
+          "#6f4f7d",
+          "#906e9f",
+          "#b28fc2",
+          "#d9b4e9",
+          "#f7e8fe"
+        ]
+      },
+      "plum-hover": {
+        "role": "neutral",
+        "displayName": "Plum Hover",
+        "canonical": "#3b2149",
+        "tonalRamp": [
+          "#160021",
+          "#30173e",
+          "#4d335c",
+          "#6c517c",
+          "#8d709e",
+          "#af91c1",
+          "#d5b6e8",
+          "#f6e9ff"
+        ]
+      },
+      "plum-scroll": {
+        "role": "neutral",
+        "displayName": "Plum Scroll",
+        "canonical": "#7c4092",
+        "tonalRamp": [
+          "#16001f",
+          "#390549",
+          "#5b1f70",
+          "#7c4092",
+          "#9d60b4",
+          "#c081d8",
+          "#e5aafc",
+          "#f8e8fe"
+        ]
+      },
+      "cotton-candy": {
+        "role": "neutral",
+        "displayName": "Cotton Candy",
+        "canonical": "#1f1626",
+        "tonalRamp": [
+          "#0f0716",
+          "#292030",
+          "#453b4d",
+          "#63596c",
+          "#83788c",
+          "#a599ae",
+          "#cbbfd5",
+          "#f5e9fe"
+        ],
+        "note": "Day ground (06:00-18:00, :root.day). Each cotton-* token is the day twin of the plum-* token with the same suffix."
+      },
+      "cotton-panel": {
+        "role": "neutral",
+        "displayName": "Cotton Panel",
+        "canonical": "#2e2038",
+        "tonalRamp": [
+          "#11051a",
+          "#2b1d35",
+          "#473952",
+          "#665672",
+          "#867693",
+          "#a897b5",
+          "#cebcdb",
+          "#f5e9ff"
+        ]
+      },
+      "cotton-panel-hi": {
+        "role": "neutral",
+        "displayName": "Cotton Panel Hi",
+        "canonical": "#382744",
+        "tonalRamp": [
+          "#12041c",
+          "#2c1c38",
+          "#493756",
+          "#675575",
+          "#887496",
+          "#a995b8",
+          "#cfbbdf",
+          "#f5e9fe"
+        ]
+      },
+      "cotton-deep": {
+        "role": "neutral",
+        "displayName": "Cotton Deep",
+        "canonical": "#17101d",
+        "tonalRamp": [
+          "#0e0814",
+          "#28202e",
+          "#443c4b",
+          "#625a6a",
+          "#82798a",
+          "#a39aac",
+          "#c9c0d2",
+          "#f4eafd"
+        ]
+      },
+      "cotton-hairline": {
+        "role": "neutral",
+        "displayName": "Cotton Hairline",
+        "canonical": "#4a3558",
+        "tonalRamp": [
+          "#14021e",
+          "#2e1a3a",
+          "#4b3659",
+          "#695378",
+          "#8a739a",
+          "#ab94bc",
+          "#d2b9e3",
+          "#f5e9fe"
+        ]
+      },
+      "cotton-hairline-hi": {
+        "role": "neutral",
+        "displayName": "Cotton Hairline Hi",
+        "canonical": "#5c426d",
+        "tonalRamp": [
+          "#150022",
+          "#30173e",
+          "#4d335d",
+          "#6b517d",
+          "#8c709f",
+          "#ae91c1",
+          "#d4b7e9",
+          "#f5e9fe"
+        ]
+      },
+      "cotton-hover": {
+        "role": "neutral",
+        "displayName": "Cotton Hover",
+        "canonical": "#46315a",
+        "tonalRamp": [
+          "#130122",
+          "#2d183f",
+          "#4a355e",
+          "#68527e",
+          "#8872a0",
+          "#aa93c3",
+          "#d0b8ea",
+          "#f3eafe"
+        ]
+      },
+      "cotton-scroll": {
+        "role": "neutral",
+        "displayName": "Cotton Scroll",
+        "canonical": "#8a62a8",
+        "tonalRamp": [
+          "#140022",
+          "#340a4c",
+          "#512b6c",
+          "#71498d",
+          "#9169b0",
+          "#b38ad3",
+          "#dab0fc",
+          "#f4e9fe"
+        ]
+      },
+      "bubblegum-pink": {
+        "role": "primary",
+        "displayName": "Bubblegum Pink",
+        "canonical": "#f5a9d0",
+        "tonalRamp": [
+          "#1c0010",
+          "#43052d",
+          "#64254a",
+          "#864468",
+          "#a96388",
+          "#cd84aa",
+          "#f5a9d0",
+          "#fee7f2"
+        ]
+      },
+      "dream-lilac": {
+        "role": "secondary",
+        "displayName": "Dream Lilac",
+        "canonical": "#c8a2f0",
+        "tonalRamp": [
+          "#130023",
+          "#320a4f",
+          "#4f2b6f",
+          "#6e4a90",
+          "#8f6ab3",
+          "#b08bd7",
+          "#d5b2fb",
+          "#f3eafe"
+        ]
+      },
+      "hot-pink": {
+        "role": "primary",
+        "displayName": "Hot Pink",
+        "canonical": "#ff8fcf",
+        "tonalRamp": [
+          "#1b0010",
+          "#45002f",
+          "#720451",
+          "#962f70",
+          "#bb5191",
+          "#e073b3",
+          "#fca4d5",
+          "#fee7f3"
+        ]
+      },
+      "moonlight": {
+        "role": "secondary",
+        "displayName": "Moonlight",
+        "canonical": "#d9c8ff",
+        "tonalRamp": [
+          "#110126",
+          "#2a1944",
+          "#463663",
+          "#645483",
+          "#8373a5",
+          "#a594c8",
+          "#cbbaf0",
+          "#f0ebfe"
+        ]
+      },
+      "pass-mint": {
+        "role": "tertiary",
+        "displayName": "Pass Mint",
+        "canonical": "#96dcaf",
+        "tonalRamp": [
+          "#010f05",
+          "#012d16",
+          "#064d2b",
+          "#276d46",
+          "#4a8e65",
+          "#6bb085",
+          "#91d7aa",
+          "#c8feda"
+        ]
+      },
+      "warn-peach": {
+        "role": "tertiary",
+        "displayName": "Warn Peach",
+        "canonical": "#ffb8c8",
+        "tonalRamp": [
+          "#1e0008",
+          "#430c1f",
+          "#632a3a",
+          "#854858",
+          "#a86877",
+          "#cc8898",
+          "#f4aebe",
+          "#fee8ec"
+        ]
+      },
+      "mode-learn-rose": {
+        "role": "tertiary",
+        "displayName": "Learn Rose",
+        "canonical": "#f0829b",
+        "tonalRamp": [
+          "#1d0007",
+          "#47041c",
+          "#750e34",
+          "#993451",
+          "#be5670",
+          "#e47791",
+          "#fbaaba",
+          "#ffe8ec"
+        ]
+      },
+      "mode-pair-periwinkle": {
+        "role": "tertiary",
+        "displayName": "Pair Periwinkle",
+        "canonical": "#a8b8ff",
+        "tonalRamp": [
+          "#050032",
+          "#171b54",
+          "#303975",
+          "#4c5897",
+          "#6a78ba",
+          "#8b9ade",
+          "#b2c1fd",
+          "#e9eefe"
+        ]
+      },
+      "mode-plan-cyan": {
+        "role": "tertiary",
+        "displayName": "Plan Cyan",
+        "canonical": "#8fd8e8",
+        "tonalRamp": [
+          "#000e12",
+          "#042930",
+          "#014854",
+          "#196977",
+          "#408998",
+          "#63abbb",
+          "#89d2e1",
+          "#d2f6fe"
+        ]
+      },
+      "petal-text": {
+        "role": "neutral",
+        "displayName": "Petal Text",
+        "canonical": "#e9dff2",
+        "tonalRamp": [
+          "#0f0814",
+          "#28202e",
+          "#443c4b",
+          "#625a6a",
+          "#82798a",
+          "#a39aac",
+          "#c9c0d2",
+          "#f4eafd"
+        ]
+      },
+      "dusk-dim": {
+        "role": "neutral",
+        "displayName": "Dusk Dim",
+        "canonical": "#958aa3",
+        "tonalRamp": [
+          "#0f0718",
+          "#281f33",
+          "#443b50",
+          "#63586f",
+          "#837890",
+          "#a499b2",
+          "#cabed9",
+          "#f3eafe"
+        ]
+      },
+      "dusk-faint": {
+        "role": "neutral",
+        "displayName": "Dusk Faint",
+        "canonical": "#6f6580",
+        "tonalRamp": [
+          "#0f061a",
+          "#281f36",
+          "#443a53",
+          "#625872",
+          "#827893",
+          "#a399b6",
+          "#c9bedc",
+          "#f1ebfe"
+        ]
+      },
+      "ink": {
+        "role": "neutral",
+        "displayName": "Ink",
+        "canonical": "#15101c",
+        "tonalRamp": [
+          "#0d0814",
+          "#26212e",
+          "#423d4b",
+          "#605a6a",
+          "#807a8a",
+          "#a19bac",
+          "#c7c0d2",
+          "#f2ebfd"
+        ]
+      }
+    },
+    "typographyMeta": {
+      "display": {
+        "displayName": "Display (Coiny)",
+        "purpose": "The closing line; docs h1 at clamp(2.25rem, 5vw, 3.5rem)/1.1."
+      },
+      "headline": {
+        "displayName": "Headline (Coiny)",
+        "purpose": "Landing section heads in pink; docs h2 at clamp(1.5rem, 2.6vw, 2rem)/1.2."
+      },
+      "title": {
+        "displayName": "Title",
+        "purpose": "Docs h3 in lilac."
+      },
+      "tagline": {
+        "displayName": "Tagline",
+        "purpose": "The one hero sentence, max 30ch."
+      },
+      "body": {
+        "displayName": "Body",
+        "purpose": "Prose; docs paragraphs capped at 36em."
+      },
+      "lede": {
+        "displayName": "Lede",
+        "purpose": "Section intros, max 60ch."
+      },
+      "label": {
+        "displayName": "Label",
+        "purpose": "Nav (0.9375rem), cat captions, scroll cue, footer, TOC."
+      },
+      "mono": {
+        "displayName": "Mono (Maple Mono)",
+        "purpose": "Tables, log lines, tabs, commands; inline code at 0.9em."
+      },
+      "mono-frontmatter": {
+        "displayName": "Front matter",
+        "purpose": "YAML key: value blocks on the card and docs pages."
+      }
+    },
+    "cssVariables": {
+      "note": "Live tokens in assets/site.css :root; :root.day overrides the plum neutrals with the cotton-* values.",
+      "map": {
+        "--bg": "bubblegum-night / cotton-candy",
+        "--panel": "plum-panel / cotton-panel",
+        "--panel-hi": "plum-panel-hi / cotton-panel-hi",
+        "--deep": "plum-deep / cotton-deep",
+        "--line": "plum-hairline / cotton-hairline",
+        "--line-hi": "plum-hairline-hi / cotton-hairline-hi",
+        "--hover": "plum-hover / cotton-hover",
+        "--scroll": "plum-scroll / cotton-scroll",
+        "--pink": "bubblegum-pink",
+        "--lilac": "dream-lilac",
+        "--hot": "hot-pink",
+        "--moon": "moonlight",
+        "--mint": "pass-mint",
+        "--peach": "warn-peach",
+        "--text": "petal-text",
+        "--dim": "dusk-dim",
+        "--faint": "dusk-faint",
+        "--ink": "ink",
+        "--mono": "Maple Mono stack",
+        "--round": "M PLUS Rounded 1c stack",
+        "--cute": "Coiny stack",
+        "--gutter": "spacing.gutter",
+        "--mc": "per-row mode colour set by site.js"
+      }
+    },
+    "shadows": [
+      {
+        "name": "install-lift",
+        "value": "0 8px 16px -10px rgba(0, 0, 0, 0.7)",
+        "purpose": "The install panel, the page's one primary action."
+      },
+      {
+        "name": "screen-lift",
+        "value": "0 10px 16px -8px rgba(0, 0, 0, 0.6)",
+        "purpose": "The demo video frame."
+      }
+    ],
+    "focus": {
+      "value": "outline: 2px solid var(--pink); outline-offset: 3px; border-radius: 6px",
+      "purpose": "Global :focus-visible ring."
+    },
+    "motion": [
+      {
+        "name": "ease",
+        "value": "cubic-bezier(0.16, 1, 0.3, 1)",
+        "purpose": "House curve for every state change and reveal."
+      },
+      {
+        "name": "hover-color",
+        "value": "0.2s",
+        "purpose": "Colour changes on links, tabs, TOC."
+      },
+      {
+        "name": "press",
+        "value": "transform 0.25s var(--ease)",
+        "purpose": "Copy button rise and squish."
+      },
+      {
+        "name": "reveal",
+        "value": "opacity 0.9s, transform 1.1s (translateY 28px), filter 0.9s (blur 6px), all var(--ease)",
+        "purpose": "Sections draw in on scroll (IntersectionObserver, -12% bottom margin)."
+      },
+      {
+        "name": "window-open",
+        "value": "clip-path inset(8% 6% round 16px) to inset(0) over 1.2s var(--ease)",
+        "purpose": "The demo opens like a window."
+      },
+      {
+        "name": "row-stagger",
+        "value": "60ms per row, 0.6s opacity / 0.8s translateY 10px",
+        "purpose": "Table rows come in one after another."
+      },
+      {
+        "name": "log-print",
+        "value": "lines 0.5s from -10px, second line +0.18s, pin +0.45s from 12px",
+        "purpose": "Repair log prints, then the note lands."
+      },
+      {
+        "name": "hero-lift",
+        "value": "scroll-driven, 0 to 90vh: translateY(-60px), opacity 0.15, blur 3px",
+        "purpose": "The hero lifts away as you leave it (where animation-timeline is supported)."
+      },
+      {
+        "name": "cat-hop",
+        "value": "0.55s arc, x ease-out cubic, y linear minus 4*arc*t*(1-t), arc 60-140px",
+        "purpose": "Mochi jumps between the hero, the floor and the heading she perches on."
+      },
+      {
+        "name": "cat-walk",
+        "value": "90px/s wandering, 190px/s following the mouse; naps after 12s alone",
+        "purpose": "Mochi walks the bottom edge on desktop."
+      },
+      {
+        "name": "glyph-spring",
+        "value": "k 0.075/frame, damping 0.84/frame, cursor reach 120px, left-to-right sweep 28ms per column",
+        "purpose": "The live logo's pixels assemble, get knocked loose and spring home; pour into the install box over the first 62% of the hero's scroll."
+      },
+      {
+        "name": "hearts",
+        "value": "float up with wobble over 70-110 frames, fading",
+        "purpose": "Petting Mochi and copying the install line."
+      },
+      {
+        "name": "bob",
+        "value": "2.4s var(--ease) infinite, 5px",
+        "purpose": "Scroll cue arrow."
+      },
+      {
+        "name": "twinkle",
+        "value": "5s ease-in-out infinite, opacity 0.08 to 0.45",
+        "purpose": "Night-sky stars (✧ ⋆) in lilac behind the hero, night only."
+      },
+      {
+        "name": "cat-frames",
+        "value": "240 to 600ms per frame by mood",
+        "purpose": "ASCII cat animation; holds a still frame under reduced motion."
+      },
+      {
+        "name": "reduced-motion",
+        "value": "all reveals, loops and smooth scroll off",
+        "purpose": "prefers-reduced-motion: reduce."
+      }
+    ],
+    "breakpoints": [
+      {
+        "name": "phone",
+        "value": "720px",
+        "purpose": "Hero and install stack, pins drop under lines, eval table regrids, roaming cat perches only."
+      },
+      {
+        "name": "docs-narrow",
+        "value": "900px",
+        "purpose": "Docs sidebar becomes a folded disclosure; docs cat hidden."
+      },
+      {
+        "name": "docs-tiny",
+        "value": "520px",
+        "purpose": "Tighter docs nav."
+      },
+      {
+        "name": "wide",
+        "value": "1240px",
+        "purpose": "Pins sit fully in the right margin."
+      }
+    ],
+    "dayNight": {
+      "day": "06:00-18:00 local: :root.day (cotton-candy), cat wears her bow ♥",
+      "night": "18:00-06:00: bubblegum-night, cat wears the moon ☾, stars twinkle in the hero"
+    }
+  },
+  "components": [
+    {
+      "name": "Copy Button",
+      "kind": "button",
+      "refersTo": "copy-button",
+      "description": "The one filled action: a pink candy pill that copies the install line and turns mint when done.",
+      "html": "<button class=\"ds-copy\" type=\"button\">copy</button> <button class=\"ds-copy ds-done\" type=\"button\">copied ♥</button>",
+      "css": ".ds-copy { font: 400 1rem/1 var(--cute); letter-spacing: 0.01em; color: var(--ink); background: var(--pink); border: 0; border-radius: 999px; padding: 12px 22px 11px; cursor: pointer; transition: transform 0.25s var(--ease), background-color 0.2s; } .ds-copy:hover { background: var(--hot); transform: translateY(-1px); } .ds-copy:active { transform: translateY(1px) scale(0.98); } .ds-copy:focus-visible { outline: 2px solid var(--pink); outline-offset: 3px; } .ds-copy.ds-done { background: var(--mint); }"
+    },
+    {
+      "name": "Install Panel",
+      "kind": "custom",
+      "refersTo": "install-panel",
+      "description": "Tabbed install panel: mono tabs, the active one filled pink with a heart, the command with a pink prompt, and the copy pill.",
+      "html": "<div class=\"ds-install\"><div class=\"ds-tabs\" role=\"tablist\"><button role=\"tab\" aria-selected=\"true\">curl</button><button role=\"tab\" aria-selected=\"false\">uv</button><button role=\"tab\" aria-selected=\"false\">arch</button><button role=\"tab\" aria-selected=\"false\">windows</button></div><div class=\"ds-body\"><code><span class=\"ds-prompt\">$ </span>uv tool install git+https://github.com/rephyr/purr</code><button class=\"ds-copy\" type=\"button\">copy</button></div></div>",
+      "css": ".ds-install { background: var(--panel); border: 1px solid var(--line); border-radius: 16px; box-shadow: 0 8px 16px -10px rgba(0,0,0,0.7); overflow: hidden; } .ds-tabs { display: flex; gap: 2px; padding: 8px 8px 0; border-bottom: 1px solid var(--line); } .ds-tabs button { font: 500 0.875rem/1 var(--mono); color: var(--dim); background: none; border: 0; border-radius: 10px 10px 0 0; padding: 10px 16px 11px; cursor: pointer; transition: color 0.2s, background-color 0.25s var(--ease); } .ds-tabs button:hover { color: var(--text); background: var(--panel-hi); } .ds-tabs button:focus-visible { outline: 2px solid var(--pink); outline-offset: -2px; } .ds-tabs button[aria-selected=\"true\"] { color: var(--ink); background: var(--pink); } .ds-tabs button[aria-selected=\"true\"]::before { content: \"♥ \"; } .ds-body { display: flex; align-items: center; gap: 16px; padding: 20px 20px 20px 24px; } .ds-body code { flex: 1; min-width: 0; overflow-x: auto; white-space: pre; font-family: var(--mono); color: var(--text); } .ds-prompt { color: var(--pink); user-select: none; } .ds-copy { font: 400 1rem/1 var(--cute); color: var(--ink); background: var(--pink); border: 0; border-radius: 999px; padding: 12px 22px 11px; cursor: pointer; transition: transform 0.25s var(--ease), background-color 0.2s; } .ds-copy:hover { background: var(--hot); transform: translateY(-1px); }"
+    },
+    {
+      "name": "Front-matter Card",
+      "kind": "card",
+      "refersTo": "front-matter-card",
+      "description": "The model-card header: owner / name, mode-glyph tag chips, and a YAML block with lilac keys.",
+      "html": "<section class=\"ds-front\"><p class=\"ds-front-title\"><span>rephyr</span> / <strong>purr</strong> <span class=\"ds-tags\"><span class=\"ds-chip\"><i>✎</i> coding agent</span><span class=\"ds-chip\"><i>♥</i> local-first</span></span></p><pre class=\"ds-yaml\"><span class=\"ds-dash\">---</span>\n<span class=\"ds-k\">license</span>: MIT\n<span class=\"ds-k\">telemetry</span>: none\n<span class=\"ds-dash\">---</span></pre></section>",
+      "css": ".ds-front { background: var(--panel); border: 1px solid var(--line); border-radius: 16px; padding: 20px 24px 18px; } .ds-front-title { display: flex; flex-wrap: wrap; align-items: baseline; gap: 4px 10px; margin: 0 0 12px; padding-bottom: 14px; border-bottom: 1px solid var(--line); font: 1rem var(--mono); color: var(--dim); } .ds-front-title strong { color: var(--text); font-weight: 700; } .ds-tags { display: flex; flex-wrap: wrap; gap: 6px; margin-left: auto; } .ds-chip { font-size: 0.75rem; color: var(--lilac); border: 1px solid var(--line-hi); border-radius: 999px; padding: 2px 10px; } .ds-chip i { font-style: normal; color: var(--pink); } .ds-yaml { margin: 0; font: 400 1rem/1.85 var(--mono); color: var(--text); white-space: pre-wrap; } .ds-dash { color: var(--faint); } .ds-k { color: var(--lilac); }"
+    },
+    {
+      "name": "Tag Chip",
+      "kind": "chip",
+      "refersTo": "tag-chip",
+      "description": "Outlined lilac pill led by a pink purr mode glyph.",
+      "html": "<span class=\"ds-chip\"><i>✦</i> small models</span>",
+      "css": ".ds-chip { font: 0.75rem var(--mono); color: var(--lilac); border: 1px solid var(--line-hi); border-radius: 999px; padding: 2px 10px; } .ds-chip i { font-style: normal; color: var(--pink); }"
+    },
+    {
+      "name": "Top Navigation",
+      "kind": "nav",
+      "refersTo": "nav-link",
+      "description": "Pixel logo left, lowercase dim links right, pink on hover and for the current page.",
+      "html": "<header class=\"ds-bar\"><a class=\"ds-mark\" href=\"#\">purr</a><nav><a href=\"#\" aria-current=\"page\">guide</a><a href=\"#\">benchmarks</a><a href=\"#\">changelog</a><a href=\"#\">github</a></nav></header>",
+      "css": ".ds-bar { display: flex; align-items: center; justify-content: space-between; gap: 16px; padding: 18px 24px; } .ds-mark { font: 400 1.25rem var(--cute); color: var(--pink); text-decoration: none; } .ds-bar nav { display: flex; gap: 24px; font: 500 0.9375rem var(--round); } .ds-bar nav a { color: var(--dim); text-decoration: none; padding: 4px 0; transition: color 0.2s; } .ds-bar nav a:hover, .ds-bar nav a[aria-current] { color: var(--pink); } .ds-bar a:focus-visible { outline: 2px solid var(--pink); outline-offset: 3px; border-radius: 6px; }",
+      "note": "The real mark is assets/logo.svg (pixel logo); the text stand-in keeps the snippet self-contained."
+    },
+    {
+      "name": "Modes Table",
+      "kind": "custom",
+      "refersTo": "modes-table",
+      "description": "Quant-table style mono rows; each row tints with its mode colour and tips its glyph on hover or focus.",
+      "html": "<table class=\"ds-modes\"><tbody><tr tabindex=\"0\" style=\"--mc:#f5a9d0\"><td class=\"ds-g\">✎</td><th>code</th><td>does the work (the default)</td></tr><tr tabindex=\"0\" style=\"--mc:#a8b8ff\"><td class=\"ds-g\">⇄</td><th>pair</th><td>you take turns, one step each</td></tr><tr tabindex=\"0\" style=\"--mc:#96dcaf\"><td class=\"ds-g\">✧</td><th>create</th><td>ideas, names and stories</td></tr></tbody></table>",
+      "css": ".ds-modes { width: 100%; border-collapse: collapse; font: 0.925rem var(--mono); color: var(--text); } .ds-modes tr { border-top: 1px solid var(--line); transition: background-color 0.25s var(--ease); } .ds-modes tr:last-child { border-bottom: 1px solid var(--line); } .ds-modes td, .ds-modes th { padding: 12px; text-align: left; } .ds-modes th { font-weight: 700; width: 7.5rem; } .ds-modes td:last-child { font-family: var(--round); font-size: 1rem; color: var(--dim); transition: color 0.2s; } .ds-g { width: 2.5rem; font-size: 1.15rem; text-align: center; color: var(--mc); transition: transform 0.35s var(--ease); } .ds-modes tr:hover, .ds-modes tr:focus-visible { background: color-mix(in srgb, var(--mc) 12%, transparent); outline: 2px solid var(--pink); outline-offset: -2px; } .ds-modes tr:hover { outline: none; } .ds-modes tr:hover td:last-child, .ds-modes tr:focus-visible td:last-child { color: var(--text); } .ds-modes tr:hover .ds-g, .ds-modes tr:focus-visible .ds-g { transform: scale(1.25) rotate(-8deg); }"
+    },
+    {
+      "name": "Repair Log Line",
+      "kind": "custom",
+      "refersTo": "repair-log",
+      "description": "A mono log panel with a bold pink note pinned in the margin by a dotted leader and dot.",
+      "html": "<div class=\"ds-log\"><div class=\"ds-lines\"><div class=\"ds-ln\"><span class=\"ds-tool\">edit_file</span> src/stats.py <span class=\"ds-dim\">old text off by a space</span></div><div class=\"ds-ln\"><span class=\"ds-ok\">✓</span> applied anyway</div></div><p class=\"ds-pin\">Fuzzy edits still apply.</p></div>",
+      "css": ".ds-log { display: grid; grid-template-columns: minmax(0, 1fr) 13rem; align-items: center; column-gap: 40px; } .ds-lines { background: var(--panel); border-radius: 12px; padding: 14px 18px; } .ds-ln { font: 0.9rem/1.6 var(--mono); color: var(--text); } .ds-tool { color: var(--lilac); } .ds-dim { color: var(--dim); } .ds-ok { color: var(--mint); } .ds-pin { position: relative; margin: 0; font: 700 1rem/1.35 var(--round); color: var(--pink); } .ds-pin::before { content: \"\"; position: absolute; right: calc(100% + 8px); top: 50%; width: 22px; border-top: 1.5px dotted var(--line-hi); } .ds-pin::after { content: \"\"; position: absolute; right: calc(100% + 28px); top: calc(50% - 3px); width: 7px; height: 7px; border-radius: 50%; background: var(--pink); }"
+    },
+    {
+      "name": "Docs TOC",
+      "kind": "nav",
+      "refersTo": "toc-link",
+      "description": "Sticky docs contents: dim links on 8px fills, pink fill for the section in view.",
+      "html": "<ul class=\"ds-toc\"><li><a href=\"#\">Install</a></li><li><a href=\"#\" aria-current=\"true\">Modes</a></li><li class=\"ds-h3\"><a href=\"#\">Plan mode</a></li></ul>",
+      "css": ".ds-toc { list-style: none; margin: 0; padding: 0; font: 500 0.875rem/1.45 var(--round); width: 15rem; } .ds-toc a { display: block; padding: 5px 10px; border-radius: 8px; color: var(--dim); text-decoration: none; transition: color 0.2s, background-color 0.2s; } .ds-h3 a { padding-left: 22px; font-size: 0.95em; } .ds-toc a:hover { color: var(--text); background: var(--panel); } .ds-toc a:focus-visible { outline: 2px solid var(--pink); outline-offset: 3px; } .ds-toc a[aria-current] { color: var(--ink); background: var(--pink); }"
+    },
+    {
+      "name": "Inline Code",
+      "kind": "custom",
+      "refersTo": "code-inline",
+      "description": "Lilac mono on a panel fill inside prose.",
+      "html": "<p class=\"ds-p\">Run <code class=\"ds-code\">purr bench</code> on your own GPU.</p>",
+      "css": ".ds-p { font: 400 1.0625rem/1.7 var(--round); color: var(--text); } .ds-code { font-family: var(--mono); font-size: 0.9em; color: var(--lilac); background: var(--panel); padding: 0.1em 0.4em; border-radius: 6px; }"
+    }
+  ],
+  "narrative": {
+    "northStar": "The Model Card",
+    "overview": "purr's site reads like its own local-model card: you land on the install line and the cat, then size it up the way you size up any model for your rig. The card grammar carries the whole world: a front-matter strip of `key: value` pairs, tag chips with purr's mode glyphs, quant-table style mono tables, and a tabbed install panel. Everything sits on deep plum grounds lifted straight from purr's TUI themes (`tui/themes.py`), so the site and the terminal app are one place.\n\nIt is cute on purpose and plain about the engineering. The cat (Mochi, the ASCII frames from purr's `tui/cat.py`) is the only character and the only animated mascot; she naps, wakes on hover, cheers on copy, follows the reader down the page in a small sticky slot, and changes mood per section. Density is low and calm: one narrow reading column (760px) under a wider hero, generous vertical breathing between blocks, two spot inks on dark.\n\nThe world refuses the gradient hero, the feature-card grid and the glowing terminal screenshot. It is dark always: the owner's hard rule and a brand commitment. There is no light mode, and nothing that fills the screen may be bright.",
+    "keyCharacteristics": [
+      "Dark plum grounds only; by day a slightly lighter cotton-candy plum, by night bubblegum-night with twinkling stars.",
+      "Two spot inks, pink and lilac; mint only for passing things.",
+      "Coiny for section heads, M PLUS Rounded 1c for prose, Maple Mono for the cat, code, tables and front matter.",
+      "The wordmark is purr's own pixel logo, not set type.",
+      "Soft, rounded panels with hairline borders; pills for actions and chips.",
+      "Motion is eased and slow-settling: sections draw in, the hero lifts away, the cat lives."
+    ],
+    "rules": [
+      {
+        "name": "The Two Inks Rule",
+        "body": "Pink and lilac are the only inks. Any other colour must be a state (mint pass, peach warn) or a purr mode colour shown in its own mode's context.",
+        "section": "colors"
+      },
+      {
+        "name": "The Mint Means Passed Rule",
+        "body": "Mint appears only on something that passed or succeeded. Never as decoration or a third accent.",
+        "section": "colors"
+      },
+      {
+        "name": "The Always Dark Rule",
+        "body": "Every ground is a deep plum. Day mode lightens the plum one step; it never inverts. No light theme, no bright full-width fill.",
+        "section": "colors"
+      },
+      {
+        "name": "The Mono Is Machine Rule",
+        "body": "Maple Mono is kept to the cat, code, commands, tables and front matter. Prose and headings never set in mono.",
+        "section": "typography"
+      },
+      {
+        "name": "The Coiny Is Loud Rule",
+        "body": "Coiny is for section heads, page titles and the copy button label only. Never for body or labels; never bold (it has one weight).",
+        "section": "typography"
+      },
+      {
+        "name": "The Logo Is Pixels Rule",
+        "body": "The wordmark is purr's own pixel logo (assets/logo.svg, from the TUI start screen), pink and lilac blocks with a shadow plum. Never retype \"purr\" as a heading in any font.",
+        "section": "typography"
+      },
+      {
+        "name": "The No Glow Rule",
+        "body": "Shadows are black and tucked under; nothing glows in pink or lilac.",
+        "section": "elevation"
+      }
+    ],
+    "dos": [
+      "Do keep every ground a deep plum, and swap the full day/night set together (`:root.day` from 06:00 to 18:00).",
+      "Do use pink for the one primary action and the things you point at, lilac for code and keys, and nothing else as an ink.",
+      "Do keep mint for passed results and copied states only.",
+      "Do use purr's own mode glyphs (✎ ◈ ✿ ⇄ ✦ ♥ ✧) and mode colours wherever a mode is named; they are the product's symbols.",
+      "Do ease motion with the house curve (cubic-bezier(0.16, 1, 0.3, 1)) and long settles (0.9 to 1.2s for reveals), and turn every loop off under prefers-reduced-motion.",
+      "Do write numbers with their ± and use tabular figures in tables."
+    ],
+    "donts": [
+      "Don't add a light mode, a light section, or any bright full-width fill.",
+      "Don't build a gradient hero, a feature-card grid, or a glowing terminal screenshot.",
+      "Don't add a third ink or use a mode colour outside its mode.",
+      "Don't set prose or headings in Maple Mono, or body text in Coiny.",
+      "Don't retype the wordmark; use the pixel logo.",
+      "Don't use dusk-faint for any text a person needs to read.",
+      "Don't add coloured glows or hard offset shadows; the three soft lifts are the whole vocabulary."
+    ]
+  }
+}

@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>{{title}} · purr ♥</title>
+<meta name="description" content="purr's {{title}}: {{about}}.">
+<meta name="color-scheme" content="dark">
+<meta name="theme-color" content="#120c16">
+<link rel="icon" href="../assets/favicon.svg" type="image/svg+xml">
+<link rel="preload" href="../assets/fonts/maple-mono-regular.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="../assets/site.css">
+<script>document.documentElement.classList.add("js")</script>
+<script type="module" src="../assets/doc.js"></script>
+</head>
+<body class="doc-page">
+<a class="skip" href="#doc">Skip to the text</a>
+
+<header class="bar">
+  <a class="bar-mark" href="../" aria-label="purr home"><img src="../assets/logo.svg" alt="purr" width="87" height="21"></a>
+  <nav aria-label="Site">
+    {{nav}}
+    <a href="https://github.com/rephyr/purr">github</a>
+  </nav>
+</header>
+
+<div class="doc-layout">
+  <aside class="doc-side">
+    <button class="doc-cat" type="button" aria-label="Pet the cat"><pre class="cat" data-cat="doc" aria-hidden="true"></pre></button>
+    <details class="toc" open>
+      <summary>on this page</summary>
+      <nav aria-label="On this page">
+        <ul>
+{{toc}}
+        </ul>
+      </nav>
+    </details>
+  </aside>
+
+  <main class="doc" id="doc">
+    <pre class="yaml doc-front"><span class="dash">---</span>
+<span class="k">page</span>: {{title}}
+<span class="k">about</span>: {{about}}
+<span class="k">source</span>: <a href="{{source_url}}">{{source}}</a>
+<span class="dash">---</span></pre>
+    <h1>{{heading}}</h1>
+{{body}}
+  </main>
+</div>
+
+<footer class="foot">
+  <span>Made from <a href="{{source_url}}">{{source}}</a> in purr's repo</span>
+  <a href="https://github.com/rephyr/purr">github.com/rephyr/purr</a>
+</footer>
+</body>
+</html>
