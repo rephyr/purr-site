@@ -3,6 +3,12 @@ import { makeCat } from "./cat.js";
 const hour = new Date().getHours();
 document.documentElement.classList.toggle("day", hour >= 6 && hour < 18);
 
+// the pinned header casts a little shadow once the page moves under it
+const bar = document.querySelector(".bar");
+const stuck = () => bar.classList.toggle("stuck", scrollY > 4);
+addEventListener("scroll", stuck, { passive: true });
+stuck();
+
 // on the docs she reads along with you
 const cat = makeCat(document.querySelector('[data-cat="doc"]'), null, "mode_learn");
 document.querySelector(".doc-cat").addEventListener("click", () => cat.once("petted", 2));
